@@ -20,6 +20,8 @@ footer {
 }
 
 article {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -62,6 +64,7 @@ img {
 /* header */
 header {
   height: 100vh;
+  padding-top: 90px;
 }
 
 .orange {
@@ -86,17 +89,18 @@ header {
 nav {
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(243, 244, 237, 1) 80%);
-  box-shadow: 0 2px #424642;
+  border-bottom: 2px solid #424642;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   left: 0;
   line-height: 70px;
-  margin-bottom: 40px;
   position: sticky;
   top: 0;
 }
 
 nav > .logo {
+  cursor: pointer;
   font-family: Amita, cursive;
   font-size: 2em;
   font-weight: bold;
@@ -105,11 +109,26 @@ nav > .logo {
 ul {
   display: flex;
   list-style-type: none;
+  position: fixed;
+  top: 73.5px;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(243, 244, 237, 0.9) 80%);
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25em;
+  transition: all 0.5s;
 }
 
 ul > li > a {
-  display: none;
   text-decoration: none;
+}
+
+ul > li > a:hover {
+  color: #c06014;
+  font-weight: bold;
 }
 
 /* hamburger menu */
@@ -167,6 +186,10 @@ ul > li > a {
 }
 
 /* article - budaya, peristiwa, biografi, tentang kami */
+article {
+  padding-top: 55px;
+}
+
 article h2 {
   margin-bottom: 20px;
 }
@@ -212,6 +235,11 @@ button {
   margin: auto 0 auto 10px;
 }
 
+.line-break {
+  display: inline;
+  color: #c06014;
+}
+
 /* aside */
 aside {
   border: 1px solid #424642;
@@ -220,6 +248,7 @@ aside {
   text-align: center;
 }
 aside img {
+  border-radius: 50%;
   margin-bottom: 20px;
   width: 40%;
 }
@@ -244,12 +273,24 @@ aside > p {
 
 .biodata p:nth-child(2) {
   font-size: 0.625em;
+  margin-bottom: 50px;
   text-align: justify;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-media a i {
+  color: #424642;
+  font-size: 1.5em;
 }
 
 /* footer */
 footer {
-  font-size: 0.625em;
+  font-size: 0.75em;
   margin-bottom: 12px;
   text-align: center;
 }
@@ -295,7 +336,8 @@ footer hr {
 
   /* header */
   header {
-    height: 68vh;
+    height: 72vh;
+    padding-top: 70px;
   }
 
   .header-title {
@@ -304,12 +346,12 @@ footer hr {
   }
 
   .header-title h1 {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     text-align: right;
   }
 
   .header-title img {
-    height: 40vh;
+    height: 38vh;
   }
 
   .header-desc {
@@ -327,7 +369,35 @@ footer hr {
 
   /* nav */
   nav {
-    margin-bottom: 70px;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    flex: 30;
+  }
+
+  .menu {
+    flex: 70;
+  }
+
+  ul {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: none;
+    height: 10vh;
+    font-size: 1em;
+  }
+
+  ul > li > a {
+    margin-left: 40px;
+  }
+
+  /* Hambureger menu */
+  .menu-toggle {
+    display: none;
   }
 
   /* article - budaya, peristiwa, biografi */
@@ -393,9 +463,14 @@ footer hr {
   /* article - tentang kami */
   #tentangKami .content section {
     align-self: flex-end;
-    flex: 60;
+    flex: 60%;
     margin-right: 360px;
   }
+
+  .line-break {
+    display: block;
+  }
+
   /* aside */
   aside {
     flex: 40%;
@@ -403,9 +478,10 @@ footer hr {
     padding: 1.5em 1.5em 4em 1.5em;
     text-align: center;
   }
+
   aside img {
     margin-bottom: 30px;
-    width: 20%;
+    width: 30%;
   }
 
   .biodata p:nth-child(1) {

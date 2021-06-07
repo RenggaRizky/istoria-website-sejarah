@@ -14,8 +14,9 @@
     <!-- Navbar -->
     <nav>
       <div class="logo"><span class="orange">.</span>istoria</div>
+
       <div class="menu">
-        <ul>
+        <ul id="menuList">
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#budaya">Budaya</a></li>
           <li><a href="#peristiwa">Peristiwa</a></li>
@@ -26,7 +27,7 @@
 
       <!-- Hamburger Menu -->
       <div class="menu-toggle">
-        <input type="checkbox" />
+        <input type="checkbox" id="checkbox" />
         <span></span>
         <span></span>
         <span></span>
@@ -34,7 +35,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="beranda">
       <div class="header-title">
         <h1>Tambah wawasan mu mengenai <span class="orange">sejarah</span></h1>
         <img src="assets/img-header.png" alt="Header" />
@@ -110,7 +111,7 @@
 
       <!-- Tentang Kami -->
       <article id="tentangKami">
-        <h2>TENTANG KAMI</h2>
+        <h2>TENTANG <span class="line-break">KAMI</span></h2>
         <div class="content">
           <section>
             <h4>Website belajar sejarah</h4>
@@ -124,6 +125,11 @@
             <div class="biodata">
               <p>Rengga Rizky Septian</p>
               <p>Saya mahasiswa dari salah satu universitas di Jakarta Selatan, kelahiran tahun 2000. Saya berniat untuk fokus mendalami dunia Pemrograman Web khususnya di bagian front end.</p>
+              <div class="social-media">
+                <a href="https://www.instagram.com/renggarzky/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://id.linkedin.com/in/rengga-rizky-septian-8a1b58199" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/RenggaRizky" target="_blank"><i class="fab fa-github-square"></i></a>
+              </div>
             </div>
           </aside>
         </div>
@@ -134,5 +140,8 @@
       <hr />
       2021 istoria. All Right Reserved
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
